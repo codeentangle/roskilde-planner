@@ -1,0 +1,23 @@
+.animate-repeat {
+    -webkit-transform-origin: 0% 0%;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+    -webkit-transition: 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000) all;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+    -webkit-transform: scale(0);
+    
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+    -webkit-transform: scale(1);
+
+}

@@ -1,0 +1,46 @@
+<!--
+    view: signin.html
+-->
+<div class="flex flex-center full-height border-box p2">
+    <div class="col-12">
+        <!-- begin logo -->
+        <div class="col-6 sm-col-2 mx-auto mb4">
+            <img src="../assets/img/logo.svg" alt="" />
+        </div>
+        <!-- end logo -->
+        <!-- begin sign in form -->
+        <div>
+            <form data-ng-submit="signIn(creds)" method="post" class="col-12 sm-col-8 md-col-4 mx-auto">
+                <!-- begin username -->
+                <div class="mb2 mt3">                    
+                    <input data-ng-model="creds.username" class="field col-12" type="text">
+                    <label>Username</label>
+                </div>
+                <!-- end username -->
+                <!-- begin password -->
+                <div>
+                    <input data-ng-model="creds.password" class="field col-12" type="password">
+                    <label class="test">Password</label>
+                </div>
+                <!-- end password -->
+                <!-- begin button group -->
+                <div class="clearfix">
+                   <div class="right">
+                        <button data-ng-click="toggleModal()" class="btn primary regular" type="button">SIGN UP</button>
+                        <button class="btn btn-primary bg-primary regular" type="submit">SIGN IN</button>
+                   </div>
+                </div>
+                <!-- end button group -->
+                <!-- begin status -->
+                <div data-ng-show="response.status" data-ng-class="{'alert-danger': response.error, 'alert-success': !response.error}" class="mt2 overflow-hidden rounded">
+                    <p data-ng-bind="response.status" class="m0 p1"></p>
+                </div>
+                <!-- end status -->
+            </form>
+        </div>
+        <!-- end sign in form -->
+    </div>
+</div>
+<!-- include templates/modal.html -->
+<div data-ng-include="'templates/modal.html'" data-ng-show="modalVisible"></div>
+<!-- include templates/modal.html -->

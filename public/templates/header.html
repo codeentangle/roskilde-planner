@@ -1,0 +1,17 @@
+<!--
+    template: header.html
+    used in: views
+-->
+<div class="bg-primary p2 z1 white">
+    <div class="container flex flex-center flex-justify">
+        <div class="inline-block h2 mr3 bold" data-ng-bind="page">
+        </div>
+        <!-- begin right -->
+        <div class="inline-block right flex flex-center bold">
+            <a ui-sref="bands" class="btn bold px1 clickable white">BANDS</a>
+            <a ui-sref="timetable" class="btn bold px1 clickable white">MY PLAN</a>
+            <i data-ng-click="signOut()" class="material-icons h2 clickable white" title="Sign out">exit_to_app</i>
+        </div>
+        <!-- end right  -->
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<!--
+    view: timetable.html
+-->
+<div>
+    <!-- begin header -->
+    <div data-ng-include="'templates/header.html'"></div>
+    <!-- end header -->
+    <div class="p2">
+        <div class="container">
+            <table class="table-light">
+                <thead>
+                    <tr>
+                        <th></th><th>Band</th><th>Time</th><th>Date</th><th>Stage</th><th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="like in likes">
+                        <td><div class="avatar" style="background-image:url({{like.thumb.url}})"></div></td>
+                        <td class="lowercase">{{like.displayName}}</td>
+                        <td data-ng-repeat="gig in like.gigs">{{gig.dateTime | date:'HH:mm'}}</td>
+                        <td data-ng-repeat="gig in like.gigs" title="{{gig.dateTime | date:'dd/MM'}}">{{gig.dateTime | date:'EEEE'}}</td>
+                        <td data-ng-repeat="gig in like.gigs">{{gig.stage.name}}</td>
+                        <td><i class="material-icons"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

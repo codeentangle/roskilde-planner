@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="roskildeApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title data-ng-bind="page"></title>
+        <!-- begin vendor styles -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" rel="stylesheet" type="text/css">
+        <link href="https://npmcdn.com/basscss@7.1.1/css/basscss.min.css" rel="stylesheet" type='text/css'>
+        <!-- end vendor styles -->
+
+        <!-- begin app style -->
+        <link href="styles/app.css" rel="stylesheet" type="text/css">
+        <link href="styles/animate.css" rel="stylesheet" type="text/css">
+        <!-- end app style -->
+    </head>
+    <body>
+        <!-- begin placeholder -->
+        <div ui-view></div>
+        <!-- end placeholder -->
+
+        <!-- begin vendor scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js" type="text/javascript"></script>
+        <!-- end vendor scripts -->
+
+        <!-- begin app scripts -->
+        <script src="scripts/app.js" type="text/javascript"></script>
+        <script src="scripts/controller/authController.js" type="text/javascript"></script>
+        <script src="scripts/controller/bandController.js" type="text/javascript"></script>
+        <script src="scripts/factory/authservice.js" type="text/javascript"></script>
+        <script src="scripts/factory/roskildeService.js" type="text/javascript"></script>
+        <script src="scripts/directive/delayAnimation.js" type="text/javascript"></script>
+        <!-- end app scripts -->
+    </body>
+</html>

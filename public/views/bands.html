@@ -1,0 +1,36 @@
+<!--
+    view: bands.html
+-->
+<div class="">
+    <!-- begin header -->
+    <div data-ng-include="'templates/header.html'"></div>
+    <!-- end header -->
+    <!-- begin search bar -->
+    <div class="bg-grey washed p2" data-ng-class="{'z1': search}">
+        <div data-ng-class="{'bg-white': search}" class="flex flex-center rounded container">
+            <i class="material-icons px2 h2 gray">search</i>
+            <input data-ng-model="search" class="field field-trans col-12 bg-half-white-trans" type="text">
+            <i class="material-icons h2 px2 clickable gray"" data-ng-class="{'hidden': !search}" data-ng-click="search = ''">clear</i>
+        </div>
+    </div>
+    <!-- end search bar -->
+
+    <!-- begin band list -->
+    <div class="p2">
+        <div class="container">
+            <div class="mxn1 clearfix">
+                <div data-ng-repeat="band in bands | filter: { displayName: search } | orderBy: 'displayName'" data-ng-if="band.showInBandList" class="band col col-12 sm-col-6 md-col-4 lg-col-3 p1 animate-repeat" data-delay-anim="{{$index}}">
+                    <figure class="m0 relative z1 rounded overflow-hidden">
+                        <i class="material-icons clickable primary absolute top-0 right-0 m1 h2" data-ng-click="like(band, likes)">{{isLiked(band, likes) > -1 ? 'favorite' : 'favorite_border'}}</i>
+                        <img data-ng-src="{{band.thumb.url}}" alt="{{band.displayName}} image" />
+                        <figcaption class="truncate p1 lowercase">
+                            {{band.displayName}}
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end band list -->
+</div>
+
